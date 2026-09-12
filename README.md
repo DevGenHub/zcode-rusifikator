@@ -101,4 +101,4 @@ Unofficial full Russian localization for the ZCode desktop app (Electron). The s
 
 ---
 
-Сделано с ❤️ сообществом. Автор: [@Evgen1C](https://github.com/Evgen1C)
+Сделано с ❤️ сообществом. Автор: [@DevGenHub](https://github.com/DevGenHub)
