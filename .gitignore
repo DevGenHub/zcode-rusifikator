@@ -1,0 +1,6 @@
+# рабочие файлы русификатора
+skill/assets/work/
+skill/assets/missing-keys.json
+*.log
+app.asar*
+*.patched
