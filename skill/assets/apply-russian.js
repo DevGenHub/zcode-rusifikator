@@ -11,6 +11,7 @@ const args = process.argv.slice(2);
 function arg(name) { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : null; }
 const ASAR = arg('--asar') || path.join(process.env.LOCALAPPDATA || 'C:/Users/Evgen/AppData/Local', 'Programs', 'ZCode', 'resources', 'app.asar');
 const DRY = args.includes('--dry-run');
+const BUILD_ONLY = args.includes('--build-only');
 const HERE = __dirname;
 const DICT_DIR = path.join(HERE, 'dict');
 const WORK = path.join(HERE, 'work');
@@ -379,6 +380,7 @@ log('целостность: OK');
     } finally { try { fs.unlinkSync(tmp); } catch {} }
   }
   log('синтаксис всех патченных файлов: OK');
+  if (BUILD_ONLY) { log('--build-only: сборка завершена, установка не выполнялась'); process.exit(0); }
   install();
 })().catch(e => fail(e.message));
 
